@@ -16,7 +16,8 @@
   <tbody>
     <% @tips.each do |tip| %>
       <tr>
-        <td><%= tip.news_tip %></td>
+        <td><%= shorten tip %></td>
+		<td><%= link_to 'Read More', tips_path(read_more: tip.id)%>
         <td><%= tip.date %></td>
         <td><%= tip.source %></td>
         <td><%= tip.reporter_following_up %></td>

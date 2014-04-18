@@ -5,6 +5,7 @@ class TipsController < ApplicationController
   # GET /tips.json
   def index
     @tips = Tip.all
+	@read_more = params[:read_more]
   end
 
   # GET /tips/1
