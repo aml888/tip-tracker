@@ -1,16 +1,18 @@
 class TipsController < ApplicationController
   before_action :set_tip, only: [:show, :edit, :update, :destroy]
-
+	
   # GET /tips
   # GET /tips.json
   def index
     @tips = Tip.all
 	@read_more = params[:read_more]
+	render 'index', layout: :default
   end
 
   # GET /tips/1
   # GET /tips/1.json
   def show
+	layout "special1"
   end
 
   # GET /tips/new
@@ -73,3 +75,4 @@ class TipsController < ApplicationController
       params.require(:tip).permit(:news_tip, :date, :source, :reporter_following_up, :notes, :status)
     end
 end
+

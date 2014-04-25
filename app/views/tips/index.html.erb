@@ -16,17 +16,18 @@
   <tbody>
     <% @tips.each do |tip| %>
       <tr>
-        <td><%= shorten tip %></td>
-		<td><%= link_to 'Read More', tips_path(read_more: tip.id)%>
-        <td><%= tip.date %></td>
-        <td><%= tip.source %></td>
-        <td><%= tip.reporter_following_up %></td>
+		<td><%= shorten tip %>
+		<%= link_to 'Read More', tips_path(read_more: tip.id)%></td>
+		<td><%= tip.date %></td>
+		<td><%= tip.source %></td>
+		<td><%= tip.reporter_following_up %></td>
         <td><%= tip.notes %></td>
         <td><%= tip.status %></td>
         <td><%= link_to 'Show', tip %></td>
         <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
         <td><%= link_to 'Destroy', tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+		<%# This is a comment! %>
+	  </tr>
     <% end %>
   </tbody>
 </table>

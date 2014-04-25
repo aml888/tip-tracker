@@ -1,10 +1,10 @@
 module TipsHelper
 	def shorten tip
-		tip = tip.news_tip
+		news_tip = tip.news_tip
 		if params[:read_more].to_i == tip.id
-			tip
+			news_tip
 		else
-			truncate tip, length: 30, omission: "..."
+			truncate news_tip, length: 30, omission: "..."
 		end
 	end
 		
