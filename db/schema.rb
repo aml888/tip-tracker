@@ -11,13 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140425003426) do
+ActiveRecord::Schema.define(version: 20140502041149) do
+
+  create_table "assignments", force: true do |t|
+    t.integer  "reporter_id"
+    t.integer  "tip_id"
+    t.string   "number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reporters", force: true do |t|
+    t.string   "full_name"
+    t.integer  "tip_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tips", force: true do |t|
     t.text     "news_tip"
     t.date     "date"
     t.string   "source"
-    t.string   "reporter_following_up"
     t.text     "notes"
     t.string   "status"
     t.datetime "created_at"

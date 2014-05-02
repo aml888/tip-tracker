@@ -6,7 +6,6 @@
       <th>News tip</th>
       <th>Date</th>
       <th>Source</th>
-      <th>Reporter following up</th>
       <th>Notes</th>
       <th>Status</th>
       <th colspan="3"></th>
@@ -20,8 +19,7 @@
 		<%= link_to 'Read More', tips_path(read_more: tip.id)%></td>
 		<td><%= tip.date %></td>
 		<td><%= tip.source %></td>
-		<td><%= tip.reporter_following_up %></td>
-        <td><%= tip.notes %></td>
+	    <td><%= tip.notes %></td>
         <td><%= tip.status %></td>
         <td><%= link_to 'Show', tip %></td>
         <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
